@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Bu bosh sahifa</h1>
+    <ul>
+        {% for post in object_list %}
+            <li>{{ post.title }}</li>
+            <br>
+            <p>{{ post.body }}</p>
+            <hr>
+        {% endfor %}
+    </ul>
 {% endblock content %}
